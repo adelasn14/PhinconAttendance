@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.DashboardActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="319dp"
+        android:layout_height="319dp"
+        android:layout_marginStart="187dp"
+        android:layout_marginTop="-140dp"
+        android:background="@drawable/round_bg"
+        android:backgroundTintMode="src_in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/welcome_to_login_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="18dp"
+        android:text="@string/your_attendance_text"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:fontFamily="@font/avenir_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageBg"
+        android:layout_width="match_parent"
+        android:layout_height="510dp"
+        android:background="@drawable/rectangle_bg"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="ContentDescription" />
+
+    <FrameLayout
+        android:id="@+id/viewPager"
+        android:layout_width="352dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/shape_white"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/checkButtonIn"
+            android:layout_width="195dp"
+            android:layout_height="195dp"
+            android:layout_marginTop="51dp"
+            android:background="@drawable/bg_button_check_in"
+            android:layout_marginStart="79dp"
+            android:text="@string/check_in_text"
+            app:backgroundTint="@null"
+            android:textSize="30sp"
+            android:fontFamily="@font/avenir_roman"
+            />
+
+        <Button
+            android:id="@+id/checkButtonOut"
+            android:layout_width="195dp"
+            android:layout_height="195dp"
+            android:layout_marginStart="79dp"
+            android:layout_marginTop="51dp"
+            android:background="@drawable/bg_button_check_out"
+            app:backgroundTint="@null"
+            android:fontFamily="@font/avenir_roman"
+            android:text="@string/check_out_text"
+            android:textSize="30sp"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="25dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/baseline_notifications_24"
+        app:layout_constraintBottom_toBottomOf="@+id/welcome_to_login_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toEndOf="@+id/welcome_to_login_text"
+        app:layout_constraintTop_toTopOf="@+id/welcome_to_login_text"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/location_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/avenir_black"
+        android:text="@string/location_text"
+        android:textColor="#042C5C"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/viewPager"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/viewPager"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_location"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="12dp"
+        tools:listitem="@layout/location_item"
+        app:layout_constraintBottom_toBottomOf="@+id/imageBg"
+        app:layout_constraintEnd_toEndOf="@+id/viewPager"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/location_text"
+        app:layout_constraintTop_toBottomOf="@+id/location_text" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:itemIconTint="@color/bottom_nav_color_icon_selector"
+        app:itemTextColor="@color/bottom_nav_color_icon_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "455881683529",
+    "firebase_url": "https://phinconattendance-b2d8c-default-rtdb.firebaseio.com",
+    "project_id": "phinconattendance-b2d8c",
+    "storage_bucket": "phinconattendance-b2d8c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455881683529:android:86403919f5b398a7e70598",
+        "android_client_info": {
+          "package_name": "com.example.phinconattendance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455881683529-mrooavk1fk3668uoms6lt8v4b86j00tk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-7FYSG0QzTC0RCn-8z7sr5oc3CZ9vGls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455881683529-mrooavk1fk3668uoms6lt8v4b86j00tk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
